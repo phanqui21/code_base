@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "thaco_htqt",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "args": [
+                "lib/main_dev.dart",
+                "--flavor",
+                "dev"
+            ]
+        },
+        {
+            "name": "thaco_htqt (staging)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_uat.dart",
+            "args": [
+                "lib/main_uat.dart",
+                "--flavor",
+                "uat"
+            ]
+        },
+        {
+            "name": "thaco_htqt (product)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "lib/main.dart",
+                "--flavor",
+                "prd"
+            ]
+        },
+        {
+            "name": "thaco_htqt (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "lib/main_uat.dart",
+                "--flavor",
+                "uat"
+            ]
+        },
+        {
+            "name": "thaco_htqt (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "lib/main.dart",
+                "--flavor",
+                "prd"
+            ]
+        }
+    ]
+}

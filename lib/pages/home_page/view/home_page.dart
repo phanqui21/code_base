@@ -4,6 +4,7 @@ import 'package:code_base/core/di/injection.dart';
 import 'package:code_base/core/enums/home_page_type.dart';
 import 'package:code_base/core/extension/color_extension.dart';
 import 'package:code_base/core/helpers/theme_helper.dart';
+import 'package:code_base/pages/user_page/view/user_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,9 +26,8 @@ class _HomePageState extends State<HomePage> {
   final homePageType = HomePageType.home;
 
   List<Widget> get _page => [
-        Container(child: Center(child: Text("Home Page"))),
-        Container(),
-        Container(),
+    Container(),
+        UserPage(),
         Container(),
         Container(),
       ];

@@ -1,7 +1,6 @@
 class APIPath {
-  static const String signIn = 'auth/login';
-  static const String users = 'users';
-  static const String refreshToken = 'auth/refresh-token';
-  static const String changePassword = 'changepassword';
-  static const String logout = 'auth/logout';
+  static const String login = 'auth/login';
+  static const String getUser = 'auth/me';
+  static const String refreshToken = 'auth/refresh';
+  static const String listProduct = 'products/';
 }

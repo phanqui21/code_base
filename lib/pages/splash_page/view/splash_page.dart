@@ -18,7 +18,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 3), () => context.pushRoute(const HomeRoute()));
+    Timer(const Duration(seconds: 3), () => context.pushRoute(const LoginRoute()));
     return Scaffold(
       body: Center(
         child: Lottie.asset(

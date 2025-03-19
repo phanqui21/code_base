@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:code_base/config/routes/route_path.dart';
+import 'package:code_base/pages/login_page/view/login_page.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/home_page/view/home_page.dart';
@@ -23,6 +24,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: HomeRoute.page,
           path: RoutePath.homePage,
+        ),
+        AutoRoute(
+          page: LoginRoute.page,
+          path: RoutePath.loginPage,
         ),
       ];
 }

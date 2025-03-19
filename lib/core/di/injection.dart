@@ -1,3 +1,5 @@
+import 'package:code_base/pages/user_page/bloc/user_bloc.dart';
+import 'package:code_base/repositories/user_repository.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
@@ -8,6 +10,7 @@ import '../../bloc/theme/theme_bloc.dart';
 import '../../config/app_router.dart';
 import '../../config/build_config.dart';
 import '../../config/routes/common_route_guard.dart';
+import '../../pages/login_page/bloc/login_bloc.dart';
 import '../../pages/splash_page/bloc/splash_bloc.dart';
 import '../../repositories/authentication_repository.dart';
 import '../enums/app_environment.dart';
@@ -52,7 +55,10 @@ Future<void> registerDependencies(AppEnvironment environment) async {
 
 void _registerRepositories() {
   getIt.registerLazySingleton<IAuthenticationRepository>(
-    () => AuthenticationRepositoryImpl(getIt<DioClient>(), getIt<BuildConfig>()),
+    () => AuthenticationRepositoryImpl(getIt<DioClient>()),
+  );
+  getIt.registerLazySingleton<IUserRepository>(
+    () => UserRepositoryImpl(getIt<DioClient>()),
   );
 }
 
@@ -70,5 +76,11 @@ void _registerBlocs() {
 
   getIt.registerFactory(
     () => TabBloc(),
+  );
+  getIt.registerFactory(
+    () => LoginBloc(getIt<IAuthenticationRepository>()),
+  );
+  getIt.registerFactory(
+    () => UserBloc(getIt<IUserRepository>()),
   );
 }

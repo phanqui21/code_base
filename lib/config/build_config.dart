@@ -1,9 +1,9 @@
 import '../core/enums/app_environment.dart';
 
 class BuildConfig {
-  static const String kPrdBaseUrl = 'https://example.prd.com';
-  static const String kStgBaseUrl = 'https://example.stg.com';
-  static const String kDevBaseUrl = 'https://example.dev.com';
+  static const String kPrdBaseUrl = 'https://dummyjson.com';
+  static const String kStgBaseUrl = 'https://dummyjson.com';
+  static const String kDevBaseUrl = 'https://dummyjson.com';
 
   AppEnvironment _environment = AppEnvironment.dev;
 
@@ -22,7 +22,7 @@ class BuildConfig {
   BuildConfig(AppEnvironment environment) {
     _environment = environment;
     _baseUrl = _initBaseUrl();
-    _apiVersion = '/api/';
+    _apiVersion = '/';
   }
 
   String _initBaseUrl() {

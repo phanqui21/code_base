@@ -9,14 +9,16 @@ part 'user.g.dart';
 class User with _$User {
   const factory User({
     required int id,
-    DateTime? createdAt,
-    DateTime? updatedAt,
     @Default('') String username,
     @Default('') String email,
+    @Default('') String gender,
     @Default('') String firstName,
     @Default('') String lastName,
-    @Default('') String middleName,
+    @Default('') String image,
+    @Default('') String accessToken,
+    @Default('') String refreshToken,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
+

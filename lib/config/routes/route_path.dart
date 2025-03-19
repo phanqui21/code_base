@@ -3,4 +3,5 @@
 class RoutePath {
   static const String splashPage = '/';
   static const String homePage = '/';
+  static const String loginPage = '/login';
 }
